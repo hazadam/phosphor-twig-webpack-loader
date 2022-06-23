@@ -29,13 +29,13 @@ function webpackCompiler(component, source) {
             rules: [
                 {
                     test: /\.twig$/,
-                    use: ['phosphor-loader'],
+                    use: ['phosphor-twig-webpack-loader'],
                 },
             ],
         },
         resolveLoader: {
             alias: {
-                'phosphor-loader': path.resolve(__dirname, './../src/phosphor-loader.js'),
+                'phosphor-twig-webpack-loader': path.resolve(__dirname, './../src/loader.js'),
             },
         },
     })];
